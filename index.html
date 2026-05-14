@@ -512,7 +512,7 @@
       <div class="chat-icon">🤖</div>
       <h3>Hỗ trợ ngay – AI Chatbot</h3>
       <p>Nhấn vào biểu tượng chat ở góc dưới bên phải để nhận hỗ trợ tức thì từ Trợ lý Thuế AI. Giải đáp mọi thắc mắc về khai thuế, hoàn thuế và thủ tục hành chính.</p>
-      <button class="btn-chat" onclick="alert('Vui lòng nhấn vào biểu tượng chat ở góc phải bên dưới!')">💬 Bắt đầu trò chuyện</button>
+      <button class="btn-chat" onclick="if(window.NXLiveChat){window.NXLiveChat.showChatBtn();}">💬 Bắt đầu trò chuyện</button>
     </div>
 
     <!-- NOTICE -->
@@ -586,13 +586,30 @@
   </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════ -->
-<!--   NXLink AI Chatbot Embedded Script               -->
-<!-- ═══════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--   NXLink AI Chatbot – Advanced Configuration + Theme      -->
+<!--   Themed to match HCM Tax Department blue (#003087)       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 <script>
+  // ── Advanced Widget Configuration ──────────────────────────
+  window.NXLiveChatConfig = {
+    defaultShowChatBtn: true,          // Show button on page load
+    width:  '64px',                    // Button width
+    height: '64px',                    // Button height
+    right:  '24px',                    // Distance from right edge
+    bottom: '24px',                    // Distance from bottom edge
+    popupRight:  '24px',               // Chat window: distance from right
+    popupBottom: '100px',              // Chat window: distance from bottom
+    // Custom government-blue chat icon hosted on GitHub Pages
+    backgroundImage: 'https://taweewut.github.io/hcm-tax-chatbot-demo/chat-icon.svg'
+  };
+
+  // ── Load NXLink Script ──────────────────────────────────────
   const script = document.createElement('script');
-  script.id = 'live-chat-script';
-  script.src = 'https://app.nxlink.ai/chatbot/client/js/live_chat.min.js?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnRfaWQiOiIzMzI1IiwiYXVkIjoiVmlzaXRvciBDbGllbnQiLCJjb25maWdfaWQiOiIxMDYiLCJuYW1lIjoiTGl2ZSBDaGF0IiwiaXNzIjoibnhhaS5jb20iLCJleHAiOjQ4NTQ2MDE5MzUsImlhdCI6MTc3ODc2MTkzNX0.fpQCPOWyf3OgvVkFMiFvyoqjR0AjDt-TgFpvhT6F2Ho&vtime=' + new Date().getTime();
+  script.id  = 'live-chat-script';
+  script.src = 'https://app.nxlink.ai/chatbot/client/js/live_chat.min.js'
+             + '?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnRfaWQiOiIzMzI1IiwiYXVkIjoiVmlzaXRvciBDbGllbnQiLCJjb25maWdfaWQiOiIxMDYiLCJuYW1lIjoiTGl2ZSBDaGF0IiwiaXNzIjoibnhhaS5jb20iLCJleHAiOjQ4NTQ2MDE5MzUsImlhdCI6MTc3ODc2MTkzNX0.fpQCPOWyf3OgvVkFMiFvyoqjR0AjDt-TgFpvhT6F2Ho'
+             + '&vtime=' + new Date().getTime();
   document.head.appendChild(script);
 </script>
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Outer circle - government blue -->
+  <circle cx="40" cy="40" r="38" fill="#003087" stroke="#0055b3" stroke-width="2"/>
+  <!-- Inner glow ring -->
+  <circle cx="40" cy="40" r="34" fill="#0055b3" opacity="0.3"/>
+  <!-- Chat bubble shape -->
+  <path d="M20 24 C20 20 23 17 27 17 L53 17 C57 17 60 20 60 24 L60 42 C60 46 57 49 53 49 L44 49 L38 56 L32 49 L27 49 C23 49 20 46 20 42 Z" fill="white" opacity="0.95"/>
+  <!-- Chat dots -->
+  <circle cx="31" cy="33" r="3" fill="#003087"/>
+  <circle cx="40" cy="33" r="3" fill="#003087"/>
+  <circle cx="49" cy="33" r="3" fill="#003087"/>
+  <!-- Vietnam star accent (small, top right) -->
+  <polygon points="67,13 68.5,17.5 73,17.5 69.5,20 71,24.5 67,22 63,24.5 64.5,20 61,17.5 65.5,17.5" fill="#f5c518" opacity="0.9"/>
+</svg>
